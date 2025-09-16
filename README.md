@@ -177,18 +177,13 @@ ________________________________________
 Opción A – CLI (recomendada para primera vez)
 
 # Crear migración inicial (si aún no existe)
-    dotnet ef migrations add InitialCreate \
-      --project ./src/SecureAuth.Infrastructure \
-      --startup-project ./src/SecureAuth.Presentation
+    dotnet ef migrations add InitialCreate `  --project .\src\SecureAuth.Infrastructure `  --startup-project .\src\SecureAuth.Presentation
 
 # Aplicar migraciones (crea app.db)
-    dotnet ef database update \
-      --project ./src/SecureAuth.Infrastructure \
-      --startup-project ./src/SecureAuth.Presentation
+    dotnet ef database update `  --project .\src\SecureAuth.Infrastructure `  --startup-project .\src\SecureAuth.Presentation
 ________________________________________
 ## 6) Ejecutar la API
 # Puertos dinámicos (los verás en consola)
-    dotnet run --project ./src/SecureAuth.Presentation
     
     dotnet run --project ./src/SecureAuth.Presentation 
 Abre Swagger: http://localhost:5087/swagger 
