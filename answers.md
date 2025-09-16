@@ -17,13 +17,13 @@
       Tokens o contraseñas pueden quedar en texto plano.
       Mitigación: guardar solo en mecanismos seguros: Keychain en iOS y Android Keystore o EncryptedSharedPreferences en Android. Evitar logs sensibles y aplicar expiración de tokens.
 
-Almacenamiento seguro: iOS vs Android
+## 2) Almacenamiento seguro: iOS vs Android
 
       OS: usa Keychain, con opciones de acceso (por ejemplo, solo después de desbloquear) y puede aprovechar el Secure Enclave para cifrado por hardware.
       Android: usa Android Keystore, que a partir de ciertas versiones también puede apoyarse en hardware. Suele complementarse con EncryptedSharedPreferences o EncryptedFile para datos estructurados.
 
 
-## 2) ¿Cómo aplicarías el patrón **Adapter** al integrar *EncryptedStorage*?
+## 3) ¿Cómo aplicarías el patrón **Adapter** al integrar *EncryptedStorage*?
 
     El patrón Adapter sirve para que la lógica de negocio no dependa directamente de una librería.
     La idea es definir una interfaz genérica, por ejemplo SecureStore, con métodos getItem, setItem y removeItem. Luego se crea una clase que implemente esa interfaz y por dentro use EncryptedStorage.
@@ -38,11 +38,11 @@ Ventaja: si cambio la librería (p. ej., a Keychain/Keystore nativos), sólo imp
 
 ---
 
-## 3) ¿Qué ventaja ofrece **react‑query** sobre **Redux** para datos asincrónicos?
+## 4) ¿Qué ventaja ofrece **react‑query** sobre **Redux** para datos asincrónicos?
     - react‑query resuelve *server state*: **caché** por clave, **deduplicación**, **reintentos**, **refetch en background**, invalidaciones selectivas.  
     - Con Redux, el *async* requiere middlewares (thunk/saga/RTK Query), manejo manual de loading/error y estrategia de caché/invalidación.
 
-**Patrón para aislar reglas de negocio del UI**
+## 5) Patrón para aislar reglas de negocio del UI
  - Para esto aplicaría Clean Architecture con Casos de Uso (Use Cases) y Repositorios en una capa de dominio (o MVVM: *View → ViewModel → UseCases/Repo*).  
       - *UI*: componentes y estados de presentación.  
       - *Dominio*: UseCases con reglas de negocio puras.  
