@@ -1,0 +1,1 @@
+{"version":3,"file":"WindowsDevice.d.ts","sourceRoot":"","sources":["../../../src/devices/desktop/WindowsDevice.tsx"],"names":[],"mappings":"AAAA;;;;;;;GAOG;AAEH,OAAO,EAAC,iBAAiB,EAAC,MAAM,yBAAyB,CAAC;AAC1D,OAAO,EAAC,YAAY,EAAC,MAAM,iBAAiB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,aAAc,SAAQ,YAAY;gBACzC,aAAa,EAAE,iBAAiB;CAa7C"}

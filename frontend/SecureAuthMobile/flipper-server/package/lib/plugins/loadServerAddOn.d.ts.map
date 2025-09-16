@@ -1,0 +1,1 @@
+{"version":3,"file":"loadServerAddOn.d.ts","sourceRoot":"","sources":["../../src/plugins/loadServerAddOn.tsx"],"names":[],"mappings":"AAAA;;;;;;;GAOG;AAEH,OAAO,EACL,WAAW,IAAI,aAAa,EAC5B,uBAAuB,EACxB,MAAM,gBAAgB,CAAC;AAGxB,UAAU,iBAAiB;IACzB,OAAO,EAAE,aAAa,CAAC,GAAG,EAAE,GAAG,CAAC,CAAC;CAClC;AAED,eAAO,MAAM,eAAe,eACd,MAAM,WACT,uBAAuB,KAC/B,iBAUF,CAAC"}

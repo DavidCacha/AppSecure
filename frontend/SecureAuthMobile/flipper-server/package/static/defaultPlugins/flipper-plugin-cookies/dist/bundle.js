@@ -1,0 +1,24 @@
+"use strict";
+
+// plugins/public/cookies/index.tsx
+var import_flipper_plugin = require("flipper-plugin");
+var columns = [
+  {
+    key: "Name",
+    width: 250
+  },
+  {
+    key: "Expires",
+    width: 250
+  },
+  {
+    key: "Value"
+  }
+];
+module.exports = (0, import_flipper_plugin.createTablePlugin)({
+  columns,
+  key: "id",
+  method: "addCookie",
+  resetMethod: "resetCookies"
+});
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsiLi4vaW5kZXgudHN4Il0sCiAgInNvdXJjZXNDb250ZW50IjogWyIvKipcbiAqIENvcHlyaWdodCAoYykgTWV0YSBQbGF0Zm9ybXMsIEluYy4gYW5kIGFmZmlsaWF0ZXMuXG4gKlxuICogVGhpcyBzb3VyY2UgY29kZSBpcyBsaWNlbnNlZCB1bmRlciB0aGUgTUlUIGxpY2Vuc2UgZm91bmQgaW4gdGhlXG4gKiBMSUNFTlNFIGZpbGUgaW4gdGhlIHJvb3QgZGlyZWN0b3J5IG9mIHRoaXMgc291cmNlIHRyZWUuXG4gKlxuICogQGZvcm1hdFxuICovXG5cbmltcG9ydCB7RGF0YVRhYmxlQ29sdW1uLCBjcmVhdGVUYWJsZVBsdWdpbn0gZnJvbSAnZmxpcHBlci1wbHVnaW4nO1xuXG50eXBlIFJvdyA9IHtcbiAgaWQ6IG51bWJlcjtcbiAgTmFtZTogc3RyaW5nO1xuICBFeHBpcmVzOiBzdHJpbmc7XG4gIFZhbHVlOiBzdHJpbmc7XG59O1xuXG5jb25zdCBjb2x1bW5zOiBEYXRhVGFibGVDb2x1bW48Um93PltdID0gW1xuICB7XG4gICAga2V5OiAnTmFtZScsXG4gICAgd2lkdGg6IDI1MCxcbiAgfSxcbiAge1xuICAgIGtleTogJ0V4cGlyZXMnLFxuICAgIHdpZHRoOiAyNTAsXG4gIH0sXG4gIHtcbiAgICBrZXk6ICdWYWx1ZScsXG4gIH0sXG5dO1xuXG5tb2R1bGUuZXhwb3J0cyA9IGNyZWF0ZVRhYmxlUGx1Z2luPFJvdz4oe1xuICBjb2x1bW5zLFxuICBrZXk6ICdpZCcsXG4gIG1ldGhvZDogJ2FkZENvb2tpZScsXG4gIHJlc2V0TWV0aG9kOiAncmVzZXRDb29raWVzJyxcbn0pO1xuIl0sCiAgIm1hcHBpbmdzIjogIjs7O0FBU0EsNEJBQWlEO0FBU2pELElBQU0sVUFBa0M7QUFBQSxFQUN0QztBQUFBLElBQ0UsS0FBSztBQUFBLElBQ0wsT0FBTztBQUFBLEVBQ1Q7QUFBQSxFQUNBO0FBQUEsSUFDRSxLQUFLO0FBQUEsSUFDTCxPQUFPO0FBQUEsRUFDVDtBQUFBLEVBQ0E7QUFBQSxJQUNFLEtBQUs7QUFBQSxFQUNQO0FBQ0Y7QUFFQSxPQUFPLGNBQVUseUNBQXVCO0FBQUEsRUFDdEM7QUFBQSxFQUNBLEtBQUs7QUFBQSxFQUNMLFFBQVE7QUFBQSxFQUNSLGFBQWE7QUFDZixDQUFDOyIsCiAgIm5hbWVzIjogW10KfQo=

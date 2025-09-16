@@ -1,0 +1,1 @@
+{"version":3,"file":"MacDevice.d.ts","sourceRoot":"","sources":["../../../src/devices/desktop/MacDevice.tsx"],"names":[],"mappings":"AAAA;;;;;;;GAOG;AAEH,OAAO,EAAC,iBAAiB,EAAC,MAAM,yBAAyB,CAAC;AAC1D,OAAO,EAAC,YAAY,EAAC,MAAM,iBAAiB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,SAAU,SAAQ,YAAY;gBACrC,aAAa,EAAE,iBAAiB;CAa7C"}

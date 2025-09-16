@@ -1,0 +1,1 @@
+{"version":3,"file":"fetch-polyfill.js","sourceRoot":"","sources":["../../src/utils/fetch-polyfill.tsx"],"names":[],"mappings":";AAAA;;;;;;;GAOG;;;;;;;;;;;;;;;;;;;;;;;;;AAEH,yDAIoB;AAapB,IAAI,CAAC,UAAU,CAAC,KAAK,EAAE,CAAC;IACtB,UAAU,CAAC,KAAK,GAAG,oBAAS,CAAC;IAC7B,UAAU,CAAC,OAAO,GAAG,oBAAS,CAAC;IAC/B,UAAU,CAAC,OAAO,GAAG,oBAAS,CAAC;IAC/B,UAAU,CAAC,QAAQ,GAAG,qBAAU,CAAC;AACnC,CAAC"}

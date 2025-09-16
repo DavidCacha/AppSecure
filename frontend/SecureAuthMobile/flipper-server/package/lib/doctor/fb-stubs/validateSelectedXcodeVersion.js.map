@@ -1,0 +1,1 @@
+{"version":3,"file":"validateSelectedXcodeVersion.js","sourceRoot":"","sources":["../../../src/doctor/fb-stubs/validateSelectedXcodeVersion.tsx"],"names":[],"mappings":";AAAA;;;;;;;GAOG;;;AAII,KAAK,UAAU,4BAA4B,CAChD,aAAqB,EACrB,eAA8B,EAC9B,UAAkD;IAElD,OAAO;QACL,UAAU,EAAE,KAAK;QACjB,OAAO,EAAE,CAAC,wBAAwB,CAAC;KACpC,CAAC;AACJ,CAAC;AATD,oEASC"}
