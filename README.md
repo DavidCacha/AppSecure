@@ -41,6 +41,11 @@ Se de correr los siguientes comandos para configurar un puerto en especifico.
     adb reverse tcp:5087 tcp:5087   
     adb reverse tcp:8081 tcp:8081 
 
+Validacion: 
+
+![WhatsApp Image 2025-09-16 at 1 49 43 AM](https://github.com/user-attachments/assets/893bae4c-a0a6-4610-a25c-60289e88c2c4)
+
+
 ## 🌍 Configuración de red
 
 La URL base se calcula automáticamente en src/config/env.ts:
