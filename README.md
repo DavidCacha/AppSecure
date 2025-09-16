@@ -150,10 +150,13 @@ cd <tu-repo>
     }
     
 También puedes usar variables de entorno (sobrescriben appsettings):
+
 •	Auth__JwtKey, Auth__Issuer, Auth__Audience
+
 •	ConnectionStrings__Default
 ________________________________________
 ## 4) Restaurar dependencias
+
 Desde la carpeta backend:
 
                       cd backend
@@ -162,6 +165,7 @@ ________________________________________
 ## 5) Base de datos (EF Core + SQLite)
 
 Opción A – CLI (recomendada para primera vez)
+
 # Crear migración inicial (si aún no existe)
     dotnet ef migrations add InitialCreate \
       --project ./src/SecureAuth.Infrastructure \
@@ -198,9 +202,13 @@ Swagger
 
 Postman
 •	Base URL: http://localhost:5087 (o https://localhost:7087).
+
 •	Register (POST /auth/register):
+
 •	{ "email": "alguien@example.com", "password": "Secret123!", "name": "Nombre" }
+
 •	Login (POST /auth/login):
+
 •	{ "email": "alguien@example.com", "password": "Secret123!" }
 <img width="1171" height="611" alt="Captura de pantalla 2025-09-15 155956" src="https://github.com/user-attachments/assets/bc330872-bc9b-4b00-bf53-e403b462e6f9" />
 
@@ -227,6 +235,7 @@ ________________________________________
 •	POST /auth/login → devuelve { accessToken, expiresAt, user }.
 
 •	GET /auth/me (JWT) → devuelve { id, email, name }.
+
 Body de registro
 { "email": "alguien@example.com", "password": "Secret123!", "name": "Nombre" }
 ________________________________________
