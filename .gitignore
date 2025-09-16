@@ -1,0 +1,23 @@
+# ---- Backend (.NET)
+**/bin/
+**/obj/
+*.user
+*.suo
+*.rsuser
+
+# ---- Frontend (React Native)
+frontend/SecureAuthMobile/node_modules/
+frontend/SecureAuthMobile/android/.cxx/
+frontend/SecureAuthMobile/android/local.properties
+frontend/SecureAuthMobile/ios/Pods/
+frontend/SecureAuthMobile/.bundle/
+frontend/SecureAuthMobile/build/
+frontend/SecureAuthMobile/.gradle/
+
+# ---- Env del front (NO subir)
+frontend/SecureAuthMobile/src/config/env.ts
+
+# ---- OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
