@@ -45,6 +45,11 @@ Validacion:
 
 ![WhatsApp Image 2025-09-16 at 1 49 43 AM](https://github.com/user-attachments/assets/893bae4c-a0a6-4610-a25c-60289e88c2c4)
 
+Emulador:
+
+<img width="395" height="695" alt="Captura de pantalla 2025-09-15 155438" src="https://github.com/user-attachments/assets/6ec2cbc9-6566-4cf9-b27d-5df1fd2631a6" />
+
+
 
 ## 🌍 Configuración de red
 
