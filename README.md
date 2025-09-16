@@ -35,7 +35,7 @@ El emulador Android resuelve localhost como 10.0.2.2 (ya contemplado en el códi
 
 ## Dispositivo fisico
 
-Se de correr los siguientes comandos para configurar un puerto en especifico.
+Se debe correr los siguientes comandos para configurar un puerto en especifico, y no impacte con el backend.
 
     adb reverse --remove-all
     adb reverse tcp:5087 tcp:5087   
