@@ -48,3 +48,73 @@ Ventaja: si cambio la librería (p. ej., a Keychain/Keystore nativos), sólo imp
       - *Dominio*: UseCases con reglas de negocio puras.  
       - *Datos*: implementaciones (API, storage) detrás de interfaces.  
     Esto permite testear reglas sin renderizar UI y cambiar fuentes de datos sin afectar la capa de presentación.
+
+# Sección 6: Refactor de código inseguro (Bonus 10 puntos) Corrige el siguiente fragmento:
+
+<img width="726" height="125" alt="imagen" src="https://github.com/user-attachments/assets/f41db0e5-98ab-4129-91ab-8f98558dbf26" />
+
+Es una version mejorada referente los puntos clave solicitados:
+
+
+    import axios from 'axios';
+    import EncryptedStorage from 'react-native-encrypted-storage'; // mejor que AsyncStorage
+    
+    const login = async (email: string, password: string) => {
+      try {
+        // 1. Siempre HTTPS
+        const response = await axios.post(
+          'https://api.banco.com/login',       // ← importante: https
+          { email, password },
+          {
+            timeout: 10000,                    // ← evita cuelgues
+            validateStatus: status => status < 500 // deja pasar 4xx para manejarlo
+          }
+        );
+    
+        // 2. Mecanismo defensivo ante respuestas inesperadas
+        if (!response.data || !response.data.token) {
+          throw new Error('Respuesta inválida del servidor');
+        }
+    
+        // 3. Almacenamiento seguro
+        await EncryptedStorage.setItem(
+          'auth_token',
+          response.data.token
+        );
+    
+        // 4. Protección en segundo plano:
+        //    se puede limpiar token temporal en appState o usar biometric unlock
+        //    (ejemplo simple: invalidar token si app queda en background mucho tiempo)
+        //    AppState y timers se configuran en otro módulo.
+    
+        navigation.navigate('Home');
+    
+      } catch (err) {
+        // Mecanismo defensivo ante errores de red, timeouts, etc.
+        console.error('Error en login:', err);
+        Alert.alert(
+          'Error de conexión',
+          'No se pudo iniciar sesión. Verifica tu conexión e inténtalo de nuevo.'
+        );
+      }
+    };
+
+## Puntos clave explicados
+
+HTTPS obligatorio: la URL ahora es https://api.banco.com/login. Asegúrate de que el backend tenga un certificado TLS válido.
+
+Almacenamiento seguro: EncryptedStorage cifra en reposo y usa Keychain (iOS) o Android Keystore, a diferencia de AsyncStorage que solo guarda en texto plano.
+
+Mecanismo defensivo contra errores:
+
+timeout y validateStatus previenen bloqueos y manejan correctamente códigos de error del servidor.
+
+throw new Error si no viene un token válido.
+
+try/catch con mensajes al usuario.
+
+Protección en segundo plano:
+
+Se puede implementar una política para limpiar o revalidar el token cuando la app entra en background (AppState de React Native) o exigir desbloqueo biométrico al reingresar.
+
+Otra opción es que el token tenga expiración corta y se renueve de manera segura.
