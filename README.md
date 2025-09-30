@@ -112,7 +112,7 @@ SecureAuthMobile/
   App.tsx
 
 
-# Backend (.NET 8) – Prueba Técnica
+# Backend (.NET 8)
 API de autenticación segura (registro, login, /auth/me) con Clean Architecture + CQRS (MediatR), EF Core (SQLite), JWT, BCrypt y Swagger. Incluye seeding de usuario demo en Development, rate limiting para /auth/login, ProblemDetails, CORS por política y HealthChecks.
 
 ________________________________________
