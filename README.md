@@ -17,9 +17,9 @@ No necesitas cambiar IP en el código para dispositivo físico: usamos adb rever
 
 ## 📥 Clonar e instalar
 
-git clone https://github.com/DavidCacha/MLG.git
+git clone https://github.com/DavidCacha/AppSecure
 
-cd MLG/frontend/SecureAuthMobile
+cd AppSecure/frontend/SecureAuthMobile
 
 npm install
 
